@@ -8,18 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="hareesh.com.addnumbers.MainActivity">
 
-    <Button
-        android:text="Add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnok"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="106dp"
-        android:layout_marginEnd="106dp"
-        android:layout_marginBottom="172dp" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,21 +25,64 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/result"
-        android:hint="Result"
-        android:layout_above="@+id/btnok"
+        android:id="@+id/num2"
+        android:layout_below="@+id/num1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="56dp" />
+        android:layout_marginTop="19dp"
+        android:hint="Enter number" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/num2"
-        android:layout_below="@+id/num1"
+        android:id="@+id/result"
+        android:hint="Result"
+        android:layout_below="@+id/num2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="19dp" />
+        android:layout_marginTop="13dp" />
+
+    <Button
+        android:text="Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnok"
+        android:layout_marginTop="65dp"
+        android:layout_alignTop="@+id/result"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnsub"
+        android:layout_alignBaseline="@+id/btnok"
+        android:layout_alignBottom="@+id/btnok"
+        android:layout_alignRight="@+id/result"
+        android:layout_alignEnd="@+id/result"
+        android:layout_marginRight="34dp"
+        android:layout_marginEnd="34dp" />
+
+    <Button
+        android:text="Multi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnmul"
+        android:layout_below="@+id/btnsub"
+        android:layout_toLeftOf="@+id/btnsub"
+        android:layout_toStartOf="@+id/btnsub" />
+
+    <Button
+        android:text="div"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnsub"
+        android:layout_toRightOf="@+id/btnmul"
+        android:layout_toEndOf="@+id/btnmul"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:id="@+id/btndiv" />
 </RelativeLayout>
