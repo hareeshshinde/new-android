@@ -10,6 +10,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 public class ProducerActivity extends AppCompatActivity {
+    public static final String KEY_RES = "result";
     protected static final String TAG= ProducerActivity.class.getCanonicalName();
     @Override
 
@@ -39,7 +40,7 @@ public class ProducerActivity extends AppCompatActivity {
 
         Intent intent=new Intent();
         Bundle bundle=new Bundle();
-        bundle.putString("keyResult",getSelectedText());
+        bundle.putString(KEY_RES,getSelectedText());
         intent.putExtras(bundle);
         setResult(RESULT_OK,intent);
 

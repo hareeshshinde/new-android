@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         bundle.putString("keyOne","mangoOne");
         bundle.putString("keyTwo","mangoTwo");
         intnt.putExtras(bundle);
-        startActivity(intnt);
+        startActivityForResult(intnt,4561);
     }
 
     public void onAndroid(View v)
@@ -46,6 +47,20 @@ public class MainActivity extends AppCompatActivity {
         bundle.putString("keyTwo","androidTwo");
         intnt.putExtras(bundle);
 
-        startActivity(intnt);
+        startActivityForResult(intnt,4561);
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode  == 4561) {
+            if(resultCode == RESULT_OK) {
+
+                ((TextView)findViewById(R.id.txtharry)).setText(data.getStringExtra(ProducerActivity.KEY_RES));
+              /*  Bundle bundle = data.getExtras();
+                if(bundle != null)
+                    ((TextView)findViewById(R.id.txtRes)).setText(bundle.getString(ProducerActivity.KEY_RES));*/
+            }
+        }
     }
 }
